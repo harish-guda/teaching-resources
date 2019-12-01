@@ -1,0 +1,8 @@
+# Ignore all latex log files
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex
+# Ignore 
