@@ -1,0 +1,161 @@
+% Exam Template for UMTYMP and Math Department courses
+%
+% Using Philip Hirschhorn's exam.cls: http://www-math.mit.edu/~psh/#ExamCls
+%
+% run pdflatex on a finished exam at least three times to do the grading table on front page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% These lines can probably stay unchanged, although you can remove the last
+% two packages if you're not making pictures with tikz.
+\documentclass[12pt]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{tikz, pgflibraryplotmarks}
+
+% By default LaTeX uses large margins.  This doesn't work well on exams; problems
+% end up in the "middle" of the page, reducing the amount of space for students
+% to work on them.
+\usepackage[margin=0.95in]{geometry}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amssymb}
+%\usepackage{epstopdf}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usepackage{todonotes}
+\usepackage{epigraph}
+\usepackage{multirow}
+
+
+ \usepackage{relsize}
+
+\usepackage{color}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{array}
+
+%\normalbaselines
+\setlength{\baselineskip}{3pt}
+\setlength{\normalbaselineskip}{5pt}
+\setlength{\extrarowheight}{0.6cm}
+
+% Here's where you edit the Class, Exam, Date, etc.
+\newcommand{\term}{SCM 502 (Fall 2019)}
+\newcommand{\class}{Operations and Supply Chain Management}
+\newcommand{\examdate}{November 15, 2019}
+\newcommand{\examnum}{Exam 1}
+\newcommand{\timelimit}{120 minutes}
+\newcommand{\initials}{Name: \hspace{2 in}}
+\renewcommand*\half{.5}
+\newcommand*{\TrueFalse}[1]{%
+\ifprintanswers
+    \ifthenelse{\equal{#1}{T}}{%
+        \textbf{TRUE}\hspace*{14pt}False
+    }{
+        True\hspace*{14pt}\textbf{FALSE}
+    }
+\else
+    {True}\hspace*{20pt}False
+\fi
+}
+%% The following code is based on an answer by Gonzalo Medina
+%% http://tex.stackexchange.com/a/13106/39194
+\newlength\TFlengthA
+\newlength\TFlengthB
+\settowidth\TFlengthA{\hspace*{1.16in}}
+\newcommand\TFQuestion[2]{%
+    \setlength\TFlengthB{\linewidth}
+    \addtolength\TFlengthB{-\TFlengthA}
+    \parbox[t]{\TFlengthA}{\TrueFalse{#1}}\parbox[t]{\TFlengthB}{#2}}
+
+
+% For an exam, single spacing is most appropriate
+\singlespacing
+% \onehalfspacing
+% \doublespacing
+
+% For an exam, we generally want to turn off paragraph indentation
+\parindent 0ex
+
+\begin{document}
+
+% These commands set up the running header on the top of the exam pages
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\term}{Page \thepage\ of \numpages}{\hspace{-1in}\initials}
+\runningheadrule
+
+\begin{flushleft}
+\begin{tabular}{p{2.5in} r l }
+\textbf{\term} &  \hspace{.5cm}\ \textbf{Name:} & \makebox[2.75in]{\hrulefill} \\
+\textbf{\examnum} &&\\
+\textbf{Duration: \timelimit} &  \hspace{.5cm}\ \textbf{Email:} & \makebox[2.75in]{\hrulefill} \\
+%\textbf{\examnum}&&\\
+%\textbf{Time Limit: \timelimit} & & \\ %Teaching Assistant & \makebox[2in]{\hrulefill}
+\end{tabular}\\
+\end{flushleft}
+\rule[1ex]{\textwidth}{.1pt}
+
+\begin{center}
+  \textbf{Instructions}
+\end{center}
+\begin{itemize}
+  \item This exam contains \numpages\ pages (including this cover page) and \numquestions\ problems. Please let me know if you need supplementary graph or blank sheets.
+
+  \item Answer all questions, writing in complete sentences as appropriate.
+
+  \item Please show all your work for any question. Indicating only the final answer without detailing your thought process will be penalized. All pages are printed one-sided; please use the second-side for analysis.
+
+  \item \textbf{Your score will depend on the clarity of your work, your detailed reasoning and the correctness of your work.}
+
+  \item This exam is open-book, open-notes, open-laptop (internet disabled) and open-calculator.
+
+  \item Communication with external sources is strictly prohibited. If you are found accessing any external source of information through the internet (other than Canvas), you will be awarded zero points on the exam.
+
+\end{itemize}
+
+
+\begin{center}
+\cellwidth{1.25em}
+\gradetablestretch{0.75}
+\vqword{Problem}
+\addpoints % required here by exam.cls, even though questions haven't started yet.	
+\gradetable[h] %use just [v] for problems,  % Use [v][pages] to have grading table by page instead of question
+\end{center}
+
+%\vspace{10em}
+%
+%\begin{quote}
+%\begin{center}
+%\emph{``Welcome to graduate school!''}\end{center}\hfill{-- Reynold Byers}
+%\end{quote}
+
+\newpage
+\begin{questions}
+\question \textbf{Title of the Question}
+
+\begin{quote}
+\centering \emph{``\ldots Motivating Quote''} \hfill{-- Source}
+\end{quote}
+
+Text of the Question
+\begin{parts}
+\part[2] A
+\vspace{20em}
+
+\part[2] B
+\vspace{20em}
+
+\part[2] C
+\vspace{40em}
+
+\end{parts}
+\newpage
+
+
+
+
+
+\end{questions}
+
+\end{document} 
