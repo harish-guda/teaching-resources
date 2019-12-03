@@ -1,0 +1,192 @@
+\documentclass[12pt, a4paper]{article}
+%\usepackage{geometry}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{\textsc{SCM 502: Operations \& Supply Chain Management} }}
+\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\textsc{Harish Guda} }}
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{verbatim} % used to display code
+\usepackage{fancyvrb}
+\usepackage{acronym}
+\usepackage{amsthm}
+\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{lightlightgray}{gray}{0.93}
+\lstset{
+%language=bash,                          % Code langugage
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+numbers=left,                           % Line nums position
+numberstyle=\tiny,                      % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray}, % Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+captionpos=t,                           % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\Large \textsc{Course Name}}
+\end{center}
+\begin{center}
+Semester\\
+Program \\
+School, University\\
+\end{center}
+%\date{September 26, 2014}
+
+\begin{center}
+\rule{\textwidth}{0.4pt}
+\begin{minipage}[t]{\textwidth}
+\medskip
+\begin{tabular}{lll}
+\textbf{Instructor} & xxx &  \medskip \\
+\textbf{Office} & xxx & \medskip \\
+\textbf{Phone} & xxx.xxx.xxxx & \medskip\\
+\textbf{Contact} & xxx@xxx & \medskip\\
+\textbf{Office Hours} & xxx & \medskip\\
+\textbf{Time} & xxx & \medskip \\
+\textbf{Venue} &  xxx & \\
+
+\end{tabular}\medskip
+\end{minipage}
+\rule{\textwidth}{0.4pt}
+\end{center}
+\vspace{.2cm}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+
+\noindent\textbf{Course Pages} \begin{enumerate}
+\item LMS: All course content such as announcements, slides, homework, grades and other required reading will be made available on LMS. Contact me through messages.
+\end{enumerate}
+
+\vskip.15in
+\noindent\textbf{Teaching Assistant}
+TBD
+\begin{enumerate}
+  \item Office Hours:
+\end{enumerate}
+
+
+\vskip.15in
+\noindent\textbf{Required Material}
+You are required to purchase the following material.
+\begin{enumerate}
+  \item Case Packet
+\end{enumerate}
+
+\vskip.15in
+\noindent\textbf{Data Requirements} Any supplemental data required to complete homeworks will be provided on Canvas.
+
+\vskip.15in
+\noindent\textbf{Supplementary Material (OPTIONAL)} %\footnotemark
+This is a restricted list of various interesting and useful resources that will be useful during the course.
+\begin{itemize}
+\item Free e-book.
+\item R and R Studio: Both R and R Studio are available for free online – See \href{https://r4ds.had.co.nz/introduction.html#prerequisites}{here} for details. There are plenty of resources online; please contact me if you have any questions regarding installation and/or use. These software are useful for statistical analysis or simulation.
+
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Description}  Broadly, there are two modules in this course: \emph{M1} and \emph{M2}.
+\begin{itemize}
+    \item \textbf{M1} Description.
+
+    \item \textbf{M2} Description.
+\end{itemize}
+
+\noindent \textbf{Tentative Course Schedule}
+\begin{center}
+\begin{minipage}{6.5in}
+\begin{flushleft}
+The schedule below is tentative. Any unexpected changes to the schedule will be announced in-class (as the course proceeds).
+
+Session 1.1\footnote{Session $w.d$ refers to the session on day $d$ in week $w$, where $d = 1$ (resp., $2$) refers to Monday (resp., Wednesday). For example, Session $1.1$ refers to Monday's session in week 1.} \dotfill Topic \#1  \\
+{\color{darkgreen}{\Rectangle}} Idea\#1, Idea\#2, Idea\#3. \smallskip \\	
+
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\noindent\textbf{Important Dates}
+\begin{center} \begin{minipage}{4in}
+\textbf{Homework}
+\begin{flushleft}
+Session 2.1 \dotfill HW\#1 \medskip \\
+Session 3.1 \dotfill HW\#2 \medskip\\
+\end{flushleft}
+\textbf{Exams}
+\begin{flushleft}
+Session 4.2 \dotfill Exam \#1 \\
+{\color{darkred}{\Rectangle}} An announcement regarding exam policies will be made closer to the exam date. 	\medskip \\
+Session 8.1 \dotfill Exam \#2 \\
+{\color{darkred}{\Rectangle}} An announcement regarding exam policies will be made closer to the exam date. \medskip \\
+\end{flushleft}
+\end{minipage}
+\end{center}
+
+\vspace*{.15in}
+\noindent\textbf{Grading Policy}
+Three components determine your grade: Exams, Case Homeworks and Case Presentation. The relative weights are as follows: \medskip\\
+\begin{center}
+\begin{minipage}{3.5in}
+\begin{flushleft}
+Exams \dotfill ~ $64$\% \\
+{\color{darkred}{\Rectangle}} Two exams, each accounting for $32$\%. 	\medskip \\
+Homeworks \dotfill ~ $36$\% \\
+{\color{darkred}{\Rectangle}} Six homeworks, each accounting for $6$\%. 	\medskip \\
+
+\end{flushleft}
+\end{minipage}
+\end{center}
+\underline{Grades will be assigned based on a curve fitted to the cumulative final score}. The guidelines of the curve are as follows:
+\begin{itemize}
+  \item Guideline \#1.
+\end{itemize}
+\vskip.15in
+\noindent\textbf{Learning Objectives}
+The key learning objectives of this course are:
+\begin{itemize}
+\item Objective \#1.
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Other Policies}
+
+
+
+%%%%%% THE END
+\end{document} 
