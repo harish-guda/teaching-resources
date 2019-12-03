@@ -15,3 +15,10 @@ If you use LaTeX to create a syllabus for your course, I recommend using this te
 A useful tip: It might be helpful to index your sessions instead of using dates (e.g., Session 1, Session 2, etc., instead of August 21st, 20xx, August 28th, 20xx, etc.) – therefore, you need not update your syllabus each semester you teach (invariant w/ time). 
 
 The component I recommend is a tentative schedule w/ a list of keywords – students find it useful to have such a list of topics. 
+
+## PowerPoint Template
+
+If you add lectures using PowerPoint, I provide a template that I like (and students find readable).
+
+The key is to minimize bezzles (white space on the borders) to as less as possible, but not any lesser. The attached template delivers on this idea. 
+
